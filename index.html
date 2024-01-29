@@ -42,7 +42,11 @@
 <body>
 
     <div id="root">
-
+        <ul>
+            <li v-for="email in emails" :key="mail">
+                {{email}}
+            </li>
+        </ul>
     </div>
  
 
