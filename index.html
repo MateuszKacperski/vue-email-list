@@ -42,8 +42,8 @@
 <body>
 
     <div id="root">
-        <ul>
-            <li v-for="email in emails" :key="mail">
+        <ul v-if="emails.length === 10">
+            <li v-for="(email, i) in emails" :key="i" class="h-100 d-flex align-item-center justify-content-center">
                 {{email}}
             </li>
         </ul>

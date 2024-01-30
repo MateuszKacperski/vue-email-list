@@ -6,12 +6,10 @@ const {createApp} = Vue;
 const app = createApp({
     name: 'Vue Slider',
     data: () => ({
-        emails: []
-      
+        emails: [],
     }),
     created(){
         for(let i=0; i < 10; i++){
-            
             axios.get(endpoint).then((res) => {
                 const mail = res.data.response;
                 this.emails.push(mail)
